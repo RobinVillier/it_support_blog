@@ -5,15 +5,14 @@
       Robin Villier
     </a>
 
+    <button class="nav-toggle" aria-expanded="false" aria-controls="site-nav" aria-label="Toggle menu">☰</button>
+
     <nav class="site-nav" id="site-nav">
       <ul class="nav-links">
         <% navLinks.forEach(function (link) { %>
       <li><a href="<%= base + link.href %>"<% if (currentPage === link.href) { %> aria-current="page"<% } %>><%= link.label %></a></li>
         <% }); %>
       </ul>
-    </nav>
-
-    <div class="header-controls">
       <ul class="contact-links">
         <% contactLinks.forEach(function (link) { %>
         <li>
@@ -22,12 +21,11 @@
           </a>
         </li>
         <% }); %>
-        <button class="theme-toggle" aria-label="Toggle theme">
-          <img class="theme-icon theme-icon-moon" src="<%= base %>assets/images/moon.svg" alt="">
-          <img class="theme-icon theme-icon-sun" src="<%= base %>assets/images/sun.svg" alt="">
-        </button>
       </ul>
-      <button class="nav-toggle" aria-expanded="false" aria-controls="site-nav" aria-label="Toggle menu">☰</button>
-    </div>
+      <button class="theme-toggle" aria-label="Toggle theme">
+        <img class="theme-icon theme-icon-moon" src="<%= base %>assets/images/moon.svg" alt="">
+        <img class="theme-icon theme-icon-sun" src="<%= base %>assets/images/sun.svg" alt="">
+      </button>
+    </nav>
   </div>
 </header>

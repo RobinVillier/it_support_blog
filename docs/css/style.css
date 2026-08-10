@@ -189,13 +189,10 @@ h3 { font-size: 1.15rem; }
   border: 1px solid var(--color-border);
   border-radius: var(--radius);
   background: var(--color-surface);
+  color: var(--color-text);
   font-size: 1.1rem;
-}
-
-.header-controls {
-  display: flex;
-  align-items: center;
-  gap: 0.6rem;
+  position: relative;
+  z-index: 60;
 }
 
 .site-nav {
@@ -207,6 +204,7 @@ h3 { font-size: 1.15rem; }
 .nav-links {
   display: flex;
   gap: 1.5rem;
+  justify-self: center;
 }
 
 .nav-links a {
@@ -251,43 +249,63 @@ h3 { font-size: 1.15rem; }
   filter: invert(1);
 }
 
-/* Mobile nav: collapse links + contact into a dropdown panel under the header */
+/* Mobile nav: full-screen panel that slides in from the right */
 @media (max-width: 640px) {
   .nav-toggle {
     display: inline-flex;
   }
 
   .site-nav {
-    position: absolute;
-    top: 100%;
-    left: 0;
-    right: 0;
+    position: fixed;
+    inset: 0;
+    display: flex;
     flex-direction: column;
-    align-items: stretch;
-    gap: 1rem;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
     background: var(--color-surface);
-    border-bottom: 1px solid var(--color-border);
-    padding: 1rem 1.25rem 1.25rem;
-    display: none;
+    transform: translateX(100%);
+    z-index: 50;
+  }
+
+  /* transition only turns on after nav.js marks the page ready (post
+     first-paint) — otherwise a page-load flash-of-unstyled-content can
+     get animated by this rule, sliding the panel in and back out */
+  body.nav-ready .site-nav {
+    transition: transform 0.3s ease;
+  }
+
+  body.resizing .site-nav {
+    transition: none;
   }
 
   .site-nav.is-open {
-    display: flex;
+    transform: translateX(0);
   }
 
   .nav-links {
     flex-direction: column;
-    gap: 0.9rem;
-  }
-
-  .contact-links {
-    flex-wrap: wrap;
+    align-items: center;
+    gap: 1.5rem;
+    font-size: 1.25rem;
   }
 }
 
 @media (min-width: 641px) {
   .nav-toggle {
     display: none;
+  }
+
+  .site-header .container {
+    display: grid;
+    grid-template-columns: auto 1fr auto auto;
+  }
+
+  /* lets nav-links/contact-links/theme-toggle lay out as direct grid items
+     of .container (needed to center nav-links independently of the icon
+     group) while staying nested inside .site-nav for the mobile menu */
+  .site-nav {
+    display: contents;
   }
 }
 
@@ -398,22 +416,20 @@ main {
 }
 
 .skills-list li{
-  border: 1px solid var(--color-border);
   border-radius: 999px;
-  padding: 0.35rem 0.9rem;
+  padding: 0.2rem 0.7rem;
   font-size: 0.9rem;
-  background: var(--color-surface);
 }
 
 .hard-skills li {
-  border : 2px solid #ee1717;
+  border : 2px solid #2BD450;
   color : var(--color-text);
-  background-color: #ce37374f;
-  box-shadow: 0 0 5px 2px #ce37374f ;
+  background-color: #27ca4b4f;
+  box-shadow: 0 0 5px 2px #27ca4b4f ;
 }
 
 .soft-skills li {
-  border : 2px solid #0054C2;
+  border : 2px solid #006FFF;
   color : var(--color-text);
   background-color: #006eff4f;
   box-shadow: 0 0 5px 2px #006eff4f ;
