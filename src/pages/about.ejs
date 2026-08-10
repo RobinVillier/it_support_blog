@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About — Robin Villier</title>
+  <meta name="description" content="About Robin Villier — skills, experience, and education.">
+  <%- include('../partials/theme-init') %>
+  <link rel="stylesheet" href="<%= base %>css/style.css">
+</head>
+<body>
+  <%- include('../partials/header') %>
+
+  <main>
+    <section class="container">
+      <h1>About Me</h1>
+      <!-- placeholder: 2-4 sentence summary of who you are and what you're looking for -->
+      <p class="lead">[A short summary about your background, what drives you toward IT support work, and what you're looking for next.]</p>
+    </section>
+
+    <section class="container resume-section">
+      <h2>Skills</h2>
+      <!-- placeholder: replace with your real skills. One <li> per skill. -->
+      <ul class="skills-list">
+        <li>[Skill]</li>
+        <li>[Skill]</li>
+        <li>[Skill]</li>
+        <li>[Skill]</li>
+        <li>[Skill]</li>
+        <li>[Skill]</li>
+      </ul>
+    </section>
+
+    <section class="container resume-section">
+      <h2>Experience</h2>
+      <!-- placeholder: duplicate this <article> for each job -->
+      <article class="resume-entry">
+        <div class="resume-entry-header">
+          <h3>[Job Title]</h3>
+          <span class="resume-entry-date">[Start] – [End]</span>
+        </div>
+        <p class="resume-entry-org">[Company Name] · [Location]</p>
+        <ul class="resume-entry-details">
+          <li>[What you did / accomplished]</li>
+          <li>[What you did / accomplished]</li>
+        </ul>
+      </article>
+
+      <article class="resume-entry">
+        <div class="resume-entry-header">
+          <h3>[Job Title]</h3>
+          <span class="resume-entry-date">[Start] – [End]</span>
+        </div>
+        <p class="resume-entry-org">[Company Name] · [Location]</p>
+        <ul class="resume-entry-details">
+          <li>[What you did / accomplished]</li>
+          <li>[What you did / accomplished]</li>
+        </ul>
+      </article>
+    </section>
+
+    <section class="container resume-section">
+      <h2>Education</h2>
+      <!-- placeholder: duplicate this <article> for each program -->
+      <article class="resume-entry">
+        <div class="resume-entry-header">
+          <h3>[Degree / Program]</h3>
+          <span class="resume-entry-date">[Start] – [End]</span>
+        </div>
+        <p class="resume-entry-org">[School Name] · [Location]</p>
+      </article>
+    </section>
+  </main>
+
+  <%- include('../partials/footer') %>
+
+  <script src="<%= base %>js/theme.js" defer></script>
+  <script src="<%= base %>js/nav.js" defer></script>
+</body>
+</html>

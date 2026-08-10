@@ -1,0 +1,15 @@
+{
+  "name": "it_support_blog",
+  "version": "1.0.0",
+  "description": "Personal site and blog built with plain HTML/CSS/JS, hosted on GitHub Pages. Serves as a resume/portfolio for IT support roles, with a blog for troubleshooting write-ups and notes.",
+  "private": true,
+  "scripts": {
+    "build": "node build.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "ejs": "^6.0.1"
+  }
+}

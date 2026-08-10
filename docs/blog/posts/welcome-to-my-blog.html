@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Welcome to My Blog — Robin Villier</title>
+  <meta name="description" content="A quick note on what this blog is for and what to expect here.">
+  <script>
+  (function () {
+    // Must match THEME_KEY in js/theme.js. Runs blocking, before first
+    // paint, so the page never flashes the wrong theme while js/theme.js
+    // (loaded with `defer`) is still waiting to run.
+    var theme = localStorage.getItem("site-theme");
+    if (theme !== "light" && theme !== "dark") {
+      theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+    }
+    document.documentElement.setAttribute("data-theme", theme);
+  })();
+</script>
+
+  <link rel="stylesheet" href="../../css/style.css">
+</head>
+<body>
+  <header class="site-header">
+  <div class="container">
+    <a class="site-logo" href="../../index.html">Robin Villier</a>
+
+    <div class="header-controls">
+      <button class="theme-toggle" aria-label="Toggle theme">🌙</button>
+      <button class="nav-toggle" aria-expanded="false" aria-controls="site-nav" aria-label="Toggle menu">☰</button>
+    </div>
+
+    <nav class="site-nav" id="site-nav">
+      <ul class="nav-links">
+        
+      <li><a href="../../index.html">Home</a></li>
+        
+      <li><a href="../../about.html">About</a></li>
+        
+      <li><a href="../../blog/index.html">Blog</a></li>
+        
+      </ul>
+      <ul class="contact-links">
+        
+        <li><a class="btn" href="mailto:rvillier99@gmail.com">Email</a></li>
+        
+        <li><a class="btn" href="https://www.linkedin.com/in/robin-villier/" target="_blank" rel="noopener">LinkedIn</a></li>
+        
+        <li><a class="btn" href="https://github.com/RobinVillier" target="_blank" rel="noopener">GitHub</a></li>
+        
+      </ul>
+    </nav>
+  </div>
+</header>
+
+
+  <main>
+    <article class="container post">
+      <a class="back-link" href="../../blog/index.html">&larr; Back to Blog</a>
+      <h1>Welcome to My Blog</h1>
+      <p class="post-date">August 10, 2026</p>
+
+      <p>
+        This is the first post on this site. I'm using it to write about IT
+        support topics: troubleshooting notes, things I learn while studying
+        for certifications, and small write-ups on problems I've solved.
+      </p>
+      <p>
+        To publish a new post, copy this file inside <code>src/pages/blog/posts/</code>,
+        update the title/date/content, add a link to it from
+        <code>src/pages/blog/index.ejs</code>, then run <code>npm run build</code>.
+      </p>
+    </article>
+  </main>
+
+  <footer class="site-footer">
+  <div class="container">
+    <p>&copy; 2026 Robin Villier</p>
+    <ul class="contact-links">
+      
+      <li><a class="btn" href="mailto:rvillier99@gmail.com">Email</a></li>
+      
+      <li><a class="btn" href="https://www.linkedin.com/in/robin-villier/" target="_blank" rel="noopener">LinkedIn</a></li>
+      
+      <li><a class="btn" href="https://github.com/RobinVillier" target="_blank" rel="noopener">GitHub</a></li>
+      
+    </ul>
+  </div>
+</footer>
+
+
+  <script src="../../js/theme.js" defer></script>
+  <script src="../../js/nav.js" defer></script>
+</body>
+</html>

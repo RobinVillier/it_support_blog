@@ -1,0 +1,12 @@
+<script>
+  (function () {
+    // Must match THEME_KEY in js/theme.js. Runs blocking, before first
+    // paint, so the page never flashes the wrong theme while js/theme.js
+    // (loaded with `defer`) is still waiting to run.
+    var theme = localStorage.getItem("site-theme");
+    if (theme !== "light" && theme !== "dark") {
+      theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+    }
+    document.documentElement.setAttribute("data-theme", theme);
+  })();
+</script>

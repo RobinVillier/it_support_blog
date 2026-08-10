@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog — Robin Villier</title>
+  <meta name="description" content="IT support notes and write-ups by Robin Villier.">
+  <%- include('../../partials/theme-init') %>
+  <link rel="stylesheet" href="<%= base %>css/style.css">
+</head>
+<body>
+  <%- include('../../partials/header') %>
+
+  <main>
+    <section class="container">
+      <h1>Blog</h1>
+      <p class="lead">Notes and write-ups on IT support, troubleshooting, and things I learn along the way.</p>
+
+      <!-- placeholder: add one <li> per post, newest first -->
+      <ul class="post-list">
+        <li class="post-list-item">
+          <a href="<%= base %>blog/posts/welcome-to-my-blog.html">
+            <h2>Welcome to My Blog</h2>
+            <span class="post-date">August 10, 2026</span>
+            <p>A quick note on what this blog is for and what to expect here.</p>
+          </a>
+        </li>
+      </ul>
+    </section>
+  </main>
+
+  <%- include('../../partials/footer') %>
+
+  <script src="<%= base %>js/theme.js" defer></script>
+  <script src="<%= base %>js/nav.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About — Robin Villier</title>
+  <meta name="description" content="About Robin Villier — skills, experience, and education.">
+  <script>
+  (function () {
+    // Must match THEME_KEY in js/theme.js. Runs blocking, before first
+    // paint, so the page never flashes the wrong theme while js/theme.js
+    // (loaded with `defer`) is still waiting to run.
+    var theme = localStorage.getItem("site-theme");
+    if (theme !== "light" && theme !== "dark") {
+      theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+    }
+    document.documentElement.setAttribute("data-theme", theme);
+  })();
+</script>
+
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="site-header">
+  <div class="container">
+    <a class="site-logo" href="index.html">Robin Villier</a>
+
+    <div class="header-controls">
+      <button class="theme-toggle" aria-label="Toggle theme">🌙</button>
+      <button class="nav-toggle" aria-expanded="false" aria-controls="site-nav" aria-label="Toggle menu">☰</button>
+    </div>
+
+    <nav class="site-nav" id="site-nav">
+      <ul class="nav-links">
+        
+      <li><a href="index.html">Home</a></li>
+        
+      <li><a href="about.html" aria-current="page">About</a></li>
+        
+      <li><a href="blog/index.html">Blog</a></li>
+        
+      </ul>
+      <ul class="contact-links">
+        
+        <li><a class="btn" href="mailto:rvillier99@gmail.com">Email</a></li>
+        
+        <li><a class="btn" href="https://www.linkedin.com/in/robin-villier/" target="_blank" rel="noopener">LinkedIn</a></li>
+        
+        <li><a class="btn" href="https://github.com/RobinVillier" target="_blank" rel="noopener">GitHub</a></li>
+        
+      </ul>
+    </nav>
+  </div>
+</header>
+
+
+  <main>
+    <section class="container">
+      <h1>About Me</h1>
+      <!-- placeholder: 2-4 sentence summary of who you are and what you're looking for -->
+      <p class="lead">[A short summary about your background, what drives you toward IT support work, and what you're looking for next.]</p>
+    </section>
+
+    <section class="container resume-section">
+      <h2>Skills</h2>
+      <!-- placeholder: replace with your real skills. One <li> per skill. -->
+      <ul class="skills-list">
+        <li>[Skill]</li>
+        <li>[Skill]</li>
+        <li>[Skill]</li>
+        <li>[Skill]</li>
+        <li>[Skill]</li>
+        <li>[Skill]</li>
+      </ul>
+    </section>
+
+    <section class="container resume-section">
+      <h2>Experience</h2>
+      <!-- placeholder: duplicate this <article> for each job -->
+      <article class="resume-entry">
+        <div class="resume-entry-header">
+          <h3>[Job Title]</h3>
+          <span class="resume-entry-date">[Start] – [End]</span>
+        </div>
+        <p class="resume-entry-org">[Company Name] · [Location]</p>
+        <ul class="resume-entry-details">
+          <li>[What you did / accomplished]</li>
+          <li>[What you did / accomplished]</li>
+        </ul>
+      </article>
+
+      <article class="resume-entry">
+        <div class="resume-entry-header">
+          <h3>[Job Title]</h3>
+          <span class="resume-entry-date">[Start] – [End]</span>
+        </div>
+        <p class="resume-entry-org">[Company Name] · [Location]</p>
+        <ul class="resume-entry-details">
+          <li>[What you did / accomplished]</li>
+          <li>[What you did / accomplished]</li>
+        </ul>
+      </article>
+    </section>
+
+    <section class="container resume-section">
+      <h2>Education</h2>
+      <!-- placeholder: duplicate this <article> for each program -->
+      <article class="resume-entry">
+        <div class="resume-entry-header">
+          <h3>[Degree / Program]</h3>
+          <span class="resume-entry-date">[Start] – [End]</span>
+        </div>
+        <p class="resume-entry-org">[School Name] · [Location]</p>
+      </article>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+  <div class="container">
+    <p>&copy; 2026 Robin Villier</p>
+    <ul class="contact-links">
+      
+      <li><a class="btn" href="mailto:rvillier99@gmail.com">Email</a></li>
+      
+      <li><a class="btn" href="https://www.linkedin.com/in/robin-villier/" target="_blank" rel="noopener">LinkedIn</a></li>
+      
+      <li><a class="btn" href="https://github.com/RobinVillier" target="_blank" rel="noopener">GitHub</a></li>
+      
+    </ul>
+  </div>
+</footer>
+
+
+  <script src="js/theme.js" defer></script>
+  <script src="js/nav.js" defer></script>
+</body>
+</html>

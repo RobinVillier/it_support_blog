@@ -1,0 +1,10 @@
+<footer class="site-footer">
+  <div class="container">
+    <p>&copy; 2026 Robin Villier</p>
+    <ul class="contact-links">
+      <% contactLinks.forEach(function (link) { %>
+      <li><a class="btn" href="<%= link.href %>"<% if (link.href.indexOf("http") === 0) { %> target="_blank" rel="noopener"<% } %>><%= link.label %></a></li>
+      <% }); %>
+    </ul>
+  </div>
+</footer>

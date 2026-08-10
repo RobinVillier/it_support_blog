@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog — Robin Villier</title>
+  <meta name="description" content="IT support notes and write-ups by Robin Villier.">
+  <script>
+  (function () {
+    // Must match THEME_KEY in js/theme.js. Runs blocking, before first
+    // paint, so the page never flashes the wrong theme while js/theme.js
+    // (loaded with `defer`) is still waiting to run.
+    var theme = localStorage.getItem("site-theme");
+    if (theme !== "light" && theme !== "dark") {
+      theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+    }
+    document.documentElement.setAttribute("data-theme", theme);
+  })();
+</script>
+
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+  <header class="site-header">
+  <div class="container">
+    <a class="site-logo" href="../index.html">Robin Villier</a>
+
+    <div class="header-controls">
+      <button class="theme-toggle" aria-label="Toggle theme">🌙</button>
+      <button class="nav-toggle" aria-expanded="false" aria-controls="site-nav" aria-label="Toggle menu">☰</button>
+    </div>
+
+    <nav class="site-nav" id="site-nav">
+      <ul class="nav-links">
+        
+      <li><a href="../index.html">Home</a></li>
+        
+      <li><a href="../about.html">About</a></li>
+        
+      <li><a href="../blog/index.html" aria-current="page">Blog</a></li>
+        
+      </ul>
+      <ul class="contact-links">
+        
+        <li><a class="btn" href="mailto:rvillier99@gmail.com">Email</a></li>
+        
+        <li><a class="btn" href="https://www.linkedin.com/in/robin-villier/" target="_blank" rel="noopener">LinkedIn</a></li>
+        
+        <li><a class="btn" href="https://github.com/RobinVillier" target="_blank" rel="noopener">GitHub</a></li>
+        
+      </ul>
+    </nav>
+  </div>
+</header>
+
+
+  <main>
+    <section class="container">
+      <h1>Blog</h1>
+      <p class="lead">Notes and write-ups on IT support, troubleshooting, and things I learn along the way.</p>
+
+      <!-- placeholder: add one <li> per post, newest first -->
+      <ul class="post-list">
+        <li class="post-list-item">
+          <a href="../blog/posts/welcome-to-my-blog.html">
+            <h2>Welcome to My Blog</h2>
+            <span class="post-date">August 10, 2026</span>
+            <p>A quick note on what this blog is for and what to expect here.</p>
+          </a>
+        </li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+  <div class="container">
+    <p>&copy; 2026 Robin Villier</p>
+    <ul class="contact-links">
+      
+      <li><a class="btn" href="mailto:rvillier99@gmail.com">Email</a></li>
+      
+      <li><a class="btn" href="https://www.linkedin.com/in/robin-villier/" target="_blank" rel="noopener">LinkedIn</a></li>
+      
+      <li><a class="btn" href="https://github.com/RobinVillier" target="_blank" rel="noopener">GitHub</a></li>
+      
+    </ul>
+  </div>
+</footer>
+
+
+  <script src="../js/theme.js" defer></script>
+  <script src="../js/nav.js" defer></script>
+</body>
+</html>

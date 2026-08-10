@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Robin Villier — IT Support Specialist</title>
+  <meta name="description" content="Personal site and blog of Robin Villier, IT Support Specialist.">
+  <%- include('../partials/theme-init') %>
+  <link rel="stylesheet" href="<%= base %>css/style.css">
+</head>
+<body>
+  <%- include('../partials/header') %>
+
+  <main>
+    <section class="container hero">
+      <h1>IT Support Specialist</h1>
+      <!-- placeholder: replace with your own one/two sentence pitch -->
+      <p class="lead">Helping people and teams solve technical problems, one ticket at a time.</p>
+      <div class="hero-actions">
+        <a class="btn btn-accent" href="<%= base %>about.html">View My Resume</a>
+        <a class="btn" href="<%= base %>blog/index.html">Read the Blog</a>
+      </div>
+    </section>
+
+    <section class="container certifications">
+      <h2>Certifications</h2>
+      <!-- placeholder cards: duplicate this <li> for each real certification -->
+      <ul class="cert-grid">
+        <li class="cert-card">
+          <h3>[Certification Name]</h3>
+          <p class="cert-issuer">[Issuing Organization] · [Year]</p>
+        </li>
+        <li class="cert-card">
+          <h3>[Certification Name]</h3>
+          <p class="cert-issuer">[Issuing Organization] · [Year]</p>
+        </li>
+        <li class="cert-card">
+          <h3>[Certification Name]</h3>
+          <p class="cert-issuer">[Issuing Organization] · [Year]</p>
+        </li>
+      </ul>
+    </section>
+  </main>
+
+  <%- include('../partials/footer') %>
+
+  <script src="<%= base %>js/theme.js" defer></script>
+  <script src="<%= base %>js/nav.js" defer></script>
+</body>
+</html>
