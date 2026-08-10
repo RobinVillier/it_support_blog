@@ -5,7 +5,6 @@ function applyTheme(theme) {
 
   const toggleBtn = document.querySelector(".theme-toggle");
   if (toggleBtn) {
-    toggleBtn.textContent = theme === "dark" ? "☀️" : "🌙";
     toggleBtn.setAttribute(
       "aria-label",
       theme === "dark" ? "Switch to light theme" : "Switch to dark theme"

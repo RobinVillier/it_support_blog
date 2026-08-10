@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Welcome to My Blog — Robin Villier</title>
   <meta name="description" content="A quick note on what this blog is for and what to expect here.">
+  <link rel="icon" type="image/svg+xml" href="../../assets/images/computer.svg">
   <script>
   (function () {
     // Must match THEME_KEY in js/theme.js. Runs blocking, before first
@@ -23,33 +24,51 @@
 <body>
   <header class="site-header">
   <div class="container">
-    <a class="site-logo" href="../../index.html">Robin Villier</a>
-
-    <div class="header-controls">
-      <button class="theme-toggle" aria-label="Toggle theme">🌙</button>
-      <button class="nav-toggle" aria-expanded="false" aria-controls="site-nav" aria-label="Toggle menu">☰</button>
-    </div>
+    <a class="site-logo" href="../../index.html">
+      <img class="site-logo-icon" src="../../assets/images/computer.svg" alt="">
+      Robin Villier
+    </a>
 
     <nav class="site-nav" id="site-nav">
       <ul class="nav-links">
         
       <li><a href="../../index.html">Home</a></li>
         
-      <li><a href="../../about.html">About</a></li>
-        
       <li><a href="../../blog/index.html">Blog</a></li>
         
-      </ul>
-      <ul class="contact-links">
-        
-        <li><a class="btn" href="mailto:rvillier99@gmail.com">Email</a></li>
-        
-        <li><a class="btn" href="https://www.linkedin.com/in/robin-villier/" target="_blank" rel="noopener">LinkedIn</a></li>
-        
-        <li><a class="btn" href="https://github.com/RobinVillier" target="_blank" rel="noopener">GitHub</a></li>
+      <li><a href="../../about.html">About</a></li>
         
       </ul>
     </nav>
+
+    <div class="header-controls">
+      <ul class="contact-links">
+        
+        <li>
+          <a class="contact-icon-link" href="mailto:rvillier99@gmail.com" aria-label="Email">
+            <img class="contact-icon" src="../../assets/images/email.svg" alt="">
+          </a>
+        </li>
+        
+        <li>
+          <a class="contact-icon-link" href="https://www.linkedin.com/in/robin-villier/" aria-label="LinkedIn" target="_blank" rel="noopener">
+            <img class="contact-icon" src="../../assets/images/linkedin.svg" alt="">
+          </a>
+        </li>
+        
+        <li>
+          <a class="contact-icon-link" href="https://github.com/RobinVillier" aria-label="GitHub" target="_blank" rel="noopener">
+            <img class="contact-icon" src="../../assets/images/github.svg" alt="">
+          </a>
+        </li>
+        
+        <button class="theme-toggle" aria-label="Toggle theme">
+          <img class="theme-icon theme-icon-moon" src="../../assets/images/moon.svg" alt="">
+          <img class="theme-icon theme-icon-sun" src="../../assets/images/sun.svg" alt="">
+        </button>
+      </ul>
+      <button class="nav-toggle" aria-expanded="false" aria-controls="site-nav" aria-label="Toggle menu">☰</button>
+    </div>
   </div>
 </header>
 
@@ -57,19 +76,36 @@
   <main>
     <article class="container post">
       <a class="back-link" href="../../blog/index.html">&larr; Back to Blog</a>
-      <h1>Welcome to My Blog</h1>
-      <p class="post-date">August 10, 2026</p>
+      <h1>Bienvenue sur mon blog</h1>
+      <p class="post-date">Août 10, 2026</p>
 
       <p>
-        This is the first post on this site. I'm using it to write about IT
-        support topics: troubleshooting notes, things I learn while studying
-        for certifications, and small write-ups on problems I've solved.
+        Voici le premier article publié sur ce site.
+        Je l'utilise pour écrire sur des sujets liés au support informatique : 
+        mes notes de troubleshooting, ce que j'apprends en préparant des certifications, 
+        ainsi que de petits articles sur les problèmes que j'ai résolus, et sur les
+        projets que dans lesquels je me lance.
+
       </p>
-      <p>
+      <!-- <p>
         To publish a new post, copy this file inside <code>src/pages/blog/posts/</code>,
         update the title/date/content, add a link to it from
         <code>src/pages/blog/index.ejs</code>, then run <code>npm run build</code>.
-      </p>
+      </p> -->
+        <br>
+<div>
+    <p>
+        Merci de m'avoir lu, et à très vite je l'espère.<br>
+        Mes emails et dms linkedin sont ouverts pour vos retours et suggestions.
+    </p>
+    <p>
+        Happy Codding !
+    </p>
+    <p>
+        Robin Villier
+    </p>
+</div>
+
     </article>
   </main>
 
@@ -78,11 +114,23 @@
     <p>&copy; 2026 Robin Villier</p>
     <ul class="contact-links">
       
-      <li><a class="btn" href="mailto:rvillier99@gmail.com">Email</a></li>
+      <li>
+        <a class="contact-icon-link" href="mailto:rvillier99@gmail.com" aria-label="Email">
+          <img class="contact-icon" src="../../assets/images/email.svg" alt="">
+        </a>
+      </li>
       
-      <li><a class="btn" href="https://www.linkedin.com/in/robin-villier/" target="_blank" rel="noopener">LinkedIn</a></li>
+      <li>
+        <a class="contact-icon-link" href="https://www.linkedin.com/in/robin-villier/" aria-label="LinkedIn" target="_blank" rel="noopener">
+          <img class="contact-icon" src="../../assets/images/linkedin.svg" alt="">
+        </a>
+      </li>
       
-      <li><a class="btn" href="https://github.com/RobinVillier" target="_blank" rel="noopener">GitHub</a></li>
+      <li>
+        <a class="contact-icon-link" href="https://github.com/RobinVillier" aria-label="GitHub" target="_blank" rel="noopener">
+          <img class="contact-icon" src="../../assets/images/github.svg" alt="">
+        </a>
+      </li>
       
     </ul>
   </div>
@@ -91,5 +139,6 @@
 
   <script src="../../js/theme.js" defer></script>
   <script src="../../js/nav.js" defer></script>
+  <script src="../../js/contact.js" defer></script>
 </body>
 </html>

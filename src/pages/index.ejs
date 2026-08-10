@@ -4,7 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Robin Villier — IT Support Specialist</title>
-  <meta name="description" content="Personal site and blog of Robin Villier, IT Support Specialist.">
+  <meta name="description" content="Blog spécialisé IT support de Robin Villier.">
+  <link rel="icon" type="image/svg+xml" href="<%= base %>assets/images/computer.svg">
   <%- include('../partials/theme-init') %>
   <link rel="stylesheet" href="<%= base %>css/style.css">
 </head>
@@ -13,31 +14,32 @@
 
   <main>
     <section class="container hero">
-      <h1>IT Support Specialist</h1>
-      <!-- placeholder: replace with your own one/two sentence pitch -->
-      <p class="lead">Helping people and teams solve technical problems, one ticket at a time.</p>
+      <div class="hero-heading">
+        <h1>Spécialiste en Support Informatique</h1>
+      </div>
+      <p class="lead">Rendre la vie plus simple en resolvant des problèmes techique, un ticket après l'autre.</p>
       <div class="hero-actions">
-        <a class="btn btn-accent" href="<%= base %>about.html">View My Resume</a>
-        <a class="btn" href="<%= base %>blog/index.html">Read the Blog</a>
+        <a class="btn btn-accent" href="<%= base %>blog/index.html">Voir mon Blog</a>
+        <a class="btn" href="<%= base %>about.html">About Me</a>
       </div>
     </section>
 
     <section class="container certifications">
-      <h2>Certifications</h2>
-      <!-- placeholder cards: duplicate this <li> for each real certification -->
+      <h2>Cértificats</h2>
       <ul class="cert-grid">
         <li class="cert-card">
+          <img src="<%= base %>assets/images/google.png" alt="Certification Google IT Support">
+          <h3>Google IT Support Spécialiste</h3>
+          <p class="cert-issuer">Google Corp. - 2026</p>
+        </li>
+        <!-- <li class="cert-card">
           <h3>[Certification Name]</h3>
           <p class="cert-issuer">[Issuing Organization] · [Year]</p>
         </li>
         <li class="cert-card">
           <h3>[Certification Name]</h3>
           <p class="cert-issuer">[Issuing Organization] · [Year]</p>
-        </li>
-        <li class="cert-card">
-          <h3>[Certification Name]</h3>
-          <p class="cert-issuer">[Issuing Organization] · [Year]</p>
-        </li>
+        </li> -->
       </ul>
     </section>
   </main>
@@ -46,5 +48,6 @@
 
   <script src="<%= base %>js/theme.js" defer></script>
   <script src="<%= base %>js/nav.js" defer></script>
+  <script src="<%= base %>js/contact.js" defer></script>
 </body>
 </html>

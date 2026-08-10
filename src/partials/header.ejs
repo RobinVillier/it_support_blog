@@ -1,11 +1,9 @@
 <header class="site-header">
   <div class="container">
-    <a class="site-logo" href="<%= base %>index.html">Robin Villier</a>
-
-    <div class="header-controls">
-      <button class="theme-toggle" aria-label="Toggle theme">🌙</button>
-      <button class="nav-toggle" aria-expanded="false" aria-controls="site-nav" aria-label="Toggle menu">☰</button>
-    </div>
+    <a class="site-logo" href="<%= base %>index.html">
+      <img class="site-logo-icon" src="<%= base %>assets/images/computer.svg" alt="">
+      Robin Villier
+    </a>
 
     <nav class="site-nav" id="site-nav">
       <ul class="nav-links">
@@ -13,11 +11,23 @@
       <li><a href="<%= base + link.href %>"<% if (currentPage === link.href) { %> aria-current="page"<% } %>><%= link.label %></a></li>
         <% }); %>
       </ul>
+    </nav>
+
+    <div class="header-controls">
       <ul class="contact-links">
         <% contactLinks.forEach(function (link) { %>
-        <li><a class="btn" href="<%= link.href %>"<% if (link.href.indexOf("http") === 0) { %> target="_blank" rel="noopener"<% } %>><%= link.label %></a></li>
+        <li>
+          <a class="contact-icon-link" href="<%= link.href %>" aria-label="<%= link.label %>"<% if (link.href.indexOf("http") === 0) { %> target="_blank" rel="noopener"<% } %>>
+            <img class="contact-icon" src="<%= base %>assets/images/<%= link.icon %>" alt="">
+          </a>
+        </li>
         <% }); %>
+        <button class="theme-toggle" aria-label="Toggle theme">
+          <img class="theme-icon theme-icon-moon" src="<%= base %>assets/images/moon.svg" alt="">
+          <img class="theme-icon theme-icon-sun" src="<%= base %>assets/images/sun.svg" alt="">
+        </button>
       </ul>
-    </nav>
+      <button class="nav-toggle" aria-expanded="false" aria-controls="site-nav" aria-label="Toggle menu">☰</button>
+    </div>
   </div>
 </header>

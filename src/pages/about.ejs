@@ -4,7 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>About — Robin Villier</title>
-  <meta name="description" content="About Robin Villier — skills, experience, and education.">
+  <meta name="description" content="About Robin Villier — skills, expérience et parcours scolaire.">
+  <link rel="icon" type="image/svg+xml" href="<%= base %>assets/images/computer.svg">
   <%- include('../partials/theme-init') %>
   <link rel="stylesheet" href="<%= base %>css/style.css">
 </head>
@@ -12,28 +13,47 @@
   <%- include('../partials/header') %>
 
   <main>
-    <section class="container">
-      <h1>About Me</h1>
-      <!-- placeholder: 2-4 sentence summary of who you are and what you're looking for -->
-      <p class="lead">[A short summary about your background, what drives you toward IT support work, and what you're looking for next.]</p>
+    <section class="container about-me">
+      <h2>About Me</h2>
+      <p class="lead">Après plusieurs années dans l’animation 3D, notamment en rigging, de développement Python et création
+          d’outils pour les équipes de production, je souhaite aujourd’hui réorienter ma carrière vers le support informatique.
+          <br>
+          <br>
+          Ce changement est finalement assez naturel pour moi : j’ai toujours été attiré par l’informatique au-delà de mon métier, 
+          que ce soit monter et configurer mes propres PC, résoudre des problèmes matériels ou logiciels, diagnostiquer des pannes 
+          ou aider les autres à trouver des solutions. Dans mon précédent métier, j’ai également développé cette même approche de 
+          résolution de problèmes : comprendre une situation, identifier la cause, tester différentes solutions et automatiser 
+          ce qui peut l’être. 
+          <br>
+          Aussi j'ai pu venir en aide aux étudiants de Bellecour Ecole, au cours de ces 3 dernières années faisant un parallel certain
+          avec le support informatique. Au dela de simplement leur apprendre mon métier, j'allais à leur rescousse pour régler tous leurs problèmes,
+          parfois en dehors des logiciels d'animation 3D.
+          <br>
+          <br>
+          Je souhaite donc mettre cette expérience technique et cette culture du troubleshooting au service de l’IT, avec 
+          l’objectif de commencer dans le support pour évoluer progressivement vers l’administration systèmes, le cloud, 
+          le DevOps, le developpement web etc.</p>
     </section>
 
     <section class="container resume-section">
       <h2>Skills</h2>
-      <!-- placeholder: replace with your real skills. One <li> per skill. -->
-      <ul class="skills-list">
-        <li>[Skill]</li>
-        <li>[Skill]</li>
-        <li>[Skill]</li>
-        <li>[Skill]</li>
-        <li>[Skill]</li>
-        <li>[Skill]</li>
+      <ul class="skills-list hard-skills">
+        <li>Windows</li>
+        <li>Linux</li>
+        <li>Réseau</li>
+        <li>PowerShell</li>
+        <li>Hardware</li>
       </ul>
-    </section>
+      <ul class="skills-list soft-skills">
+        <li>Troubleshooting</li>
+        <li>Esprit d’analyse</li>
+        <li>Résolution de problèmes</li>
+        <li>Communication</li>
+      </ul>
+    <!-- </section>
 
     <section class="container resume-section">
       <h2>Experience</h2>
-      <!-- placeholder: duplicate this <article> for each job -->
       <article class="resume-entry">
         <div class="resume-entry-header">
           <h3>[Job Title]</h3>
@@ -61,7 +81,6 @@
 
     <section class="container resume-section">
       <h2>Education</h2>
-      <!-- placeholder: duplicate this <article> for each program -->
       <article class="resume-entry">
         <div class="resume-entry-header">
           <h3>[Degree / Program]</h3>
@@ -69,12 +88,13 @@
         </div>
         <p class="resume-entry-org">[School Name] · [Location]</p>
       </article>
-    </section>
+    </section> -->
   </main>
 
   <%- include('../partials/footer') %>
 
   <script src="<%= base %>js/theme.js" defer></script>
   <script src="<%= base %>js/nav.js" defer></script>
+  <script src="<%= base %>js/contact.js" defer></script>
 </body>
 </html>

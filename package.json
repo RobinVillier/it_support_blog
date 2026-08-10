@@ -4,12 +4,18 @@
   "description": "Personal site and blog built with plain HTML/CSS/JS, hosted on GitHub Pages. Serves as a resume/portfolio for IT support roles, with a blog for troubleshooting write-ups and notes.",
   "private": true,
   "scripts": {
-    "build": "node build.js"
+    "build": "node build.js",
+    "watch:build": "nodemon --watch src --watch css --watch js -e ejs,js,css --exec \"node build.js\"",
+    "watch:serve": "live-server docs --port=8080",
+    "dev": "concurrently -n build,serve -c blue,green \"npm:watch:build\" \"npm:watch:serve\""
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "ejs": "^6.0.1"
+    "concurrently": "^10.0.4",
+    "ejs": "^6.0.1",
+    "live-server": "^1.2.2",
+    "nodemon": "^3.1.14"
   }
 }
