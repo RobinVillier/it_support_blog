@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>About — Robin Villier</title>
   <meta name="description" content="About Robin Villier — skills, expérience et parcours scolaire.">
-  <link rel="icon" type="image/svg+xml" href="<%= base %>assets/images/computer.svg">
+  <link rel="icon" type="image/svg+xml" href="<%= base %>assets/images/logo.svg">
   <%- include('../partials/theme-init') %>
   <link rel="stylesheet" href="<%= base %>css/style.css">
 </head>
@@ -14,35 +14,46 @@
 
   <main>
     <section class="container about-me">
-      <h2>About Me</h2>
-      <p class="lead">Après plusieurs années dans l’animation 3D, notamment en rigging, de développement Python et création
+      <h2 class="btm-divider">About Me</h2>
+      <div class="about-me-body">
+        <img class="profile-picture" src="<%= base %>assets/images/profile_picture.jpg" alt="Robin Villier">
+        <p class="profile-name">Robin Villier<br>Technicien Support IT</p>
+        <p class="lead">
+          Après plusieurs années dans l’animation 3D, notamment en rigging et développement Python et création
           d’outils pour les équipes de production, je souhaite aujourd’hui réorienter ma carrière vers le support informatique.
           <br>
           <br>
-          Ce changement est finalement assez naturel pour moi : j’ai toujours été attiré par l’informatique au-delà de mon métier, 
-          que ce soit monter et configurer mes propres PC, résoudre des problèmes matériels ou logiciels, diagnostiquer des pannes 
-          ou aider les autres à trouver des solutions. Dans mon précédent métier, j’ai également développé cette même approche de 
-          résolution de problèmes : comprendre une situation, identifier la cause, tester différentes solutions et automatiser 
-          ce qui peut l’être. 
-          <br>
-          Aussi j'ai pu venir en aide aux étudiants de Bellecour Ecole, au cours de ces 3 dernières années faisant un parallel certain
-          avec le support informatique. Au dela de simplement leur apprendre mon métier, j'allais à leur rescousse pour régler tous leurs problèmes,
-          parfois en dehors des logiciels d'animation 3D.
+          Ce changement est finalement assez naturel pour moi : j’ai toujours adoré l’informatique au-delà de mon métier,
+          que ce soit monter et configurer mes PC et ceux d'amis, résoudre des problèmes matériels ou logiciels, diagnostiquer des pannes
+          ou aider les autres à trouver des solutions. Dans mon précédent métier, j’ai également développé cette même approche de
+          résolution de problèmes : comprendre une situation, identifier la cause, tester différentes solutions et automatiser
+          ce qui peut l’être.
           <br>
           <br>
-          Je souhaite donc mettre cette expérience technique et cette culture du troubleshooting au service de l’IT, avec 
-          l’objectif de commencer dans le support pour évoluer progressivement vers l’administration systèmes, le cloud, 
-          le DevOps, le developpement web etc.</p>
+          Dans le même esprit, en tant qu'enseignant à Bellecour École, j'ai pu faire profiter mes élèves de toutes ces compétences 
+          en les aidant sur un plan technique et organisationnel au cours de ces 3 dernières années, faisant un parallèle  certain avec 
+          le support informatique aussi bien par la gestion de logiciels que par le code avec des applications Python par exemple. Au-delà 
+          de simplement leur apprendre mon métier, j'allais à leur rescousse pour régler tous leurs problèmes, parfois même en dehors des 
+          logiciels d'animation 3D.
+          <br>
+          <br>
+          Riche de mon expérience technique et de cette culture du troubleshooting, je m'oriente naturellement vers l’IT, avec l’objectif 
+          de commencer dans le support pour évoluer progressivement vers l’administration système, le cloud, le DevOps, le développement web etc.
+        </p>
+      </div>
     </section>
 
     <section class="container resume-section">
       <h2>Skills</h2>
       <ul class="skills-list hard-skills">
+        <li>Python</li>
         <li>Windows</li>
         <li>Linux</li>
         <li>Réseau</li>
         <li>PowerShell</li>
-        <li>Hardware</li>
+        <li>Hardware / PC Build</li>
+        <li>HTML</li>
+        <li>JS</li>
       </ul>
       <ul class="skills-list soft-skills">
         <li>Troubleshooting</li>

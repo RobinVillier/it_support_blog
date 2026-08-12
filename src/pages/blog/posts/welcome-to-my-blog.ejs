@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Welcome to My Blog — Robin Villier</title>
   <meta name="description" content="A quick note on what this blog is for and what to expect here.">
-  <link rel="icon" type="image/svg+xml" href="<%= base %>assets/images/computer.svg">
+  <link rel="icon" type="image/svg+xml" href="<%= base %>assets/images/logo.svg">
   <%- include('../../../partials/theme-init') %>
   <link rel="stylesheet" href="<%= base %>css/style.css">
 </head>
@@ -14,10 +14,11 @@
 
   <main>
     <article class="container post">
-      <a class="back-link" href="<%= base %>blog/index.html">&larr; Back to Blog</a>
+      <a class="back-link" href="<%= base %>blog/index.html">← Back to Blog</a>
       <h1>Bienvenue sur mon blog</h1>
       <p class="post-date">Août 10, 2026</p>
-
+      
+      <p class="btm-divider">Bienvenue sur mon blog, ayant pour but de documenter ma reconversion dans le monde de l'IT</p>
       <p>
       Voici le premier article publié sur ce site.
       Je l'utilise pour écrire sur des sujets liés au support informatique :
@@ -25,12 +26,8 @@
       ainsi que de petits articles sur les problèmes que j'ai résolus et les
       projets dans lesquels je me lance.
       </p>
-      <!-- <p>
-        To publish a new post, copy this file inside <code>src/pages/blog/posts/</code>,
-        update the title/date/content, add a link to it from
-        <code>src/pages/blog/index.ejs</code>, then run <code>npm run build</code>.
-      </p> -->
-        <%- include('greetings') %>
+      
+      <%- include('greetings') %>
     </article>
   </main>
 
