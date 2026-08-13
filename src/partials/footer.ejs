@@ -6,7 +6,7 @@
       <% contactLinks.forEach(function (link) { %>
       <li>
         <a class="contact-icon-link" href="<%= link.href %>" aria-label="<%= link.label %>"<% if (link.href.indexOf("http") === 0) { %> target="_blank" rel="noopener"<% } %>>
-          <img class="contact-icon" src="<%= base %>assets/images/<%= link.icon %>" alt="">
+          <span class="icon-mask contact-icon" aria-hidden="true" style="mask-image: url('<%= base %>assets/images/<%= link.icon %>'); -webkit-mask-image: url('<%= base %>assets/images/<%= link.icon %>');"></span>
         </a>
       </li>
       <% }); %>

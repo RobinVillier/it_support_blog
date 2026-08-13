@@ -26,10 +26,7 @@ button {
   cursor: pointer;
 }
 
-/* ---------- Theme tokens ---------- */
-/* Light theme is the default. Dark theme applies automatically if the
-   visitor's OS prefers it, and can always be overridden by the toggle
-   (which sets data-theme on <html> and is persisted in localStorage). */
+/* ---------- Theme variable ---------- */
 :root {
   --color-bg-primary: #f8fafc;
   --color-bg-secondary: #eaf0f6;
@@ -158,12 +155,16 @@ h3 { font-size: 1.15rem; }
 
 /* ---------- Header / Nav ---------- */
 .site-header {
+  position: sticky;
+  top: 0;
+  z-index: 40;
   padding: 0 1rem;
   width: calc(100% - 1.5rem);
   max-width: var(--max-width);
   margin: 0 auto;
   border-radius: 0 0 var(--radius) var(--radius);
   background-color: var(--color-bg-secondary);
+  box-shadow: 0 0 8px 5px var(--color-bg-primary);
 }
 
 .site-header .container {
@@ -184,14 +185,25 @@ h3 { font-size: 1.15rem; }
   white-space: nowrap;
 }
 
+/* Masked icons follow --color-text automatically in both themes, no matter
+   whether the source image is a vector SVG or a raster PNG/JPG wrapped in
+   one — the image is only used as an alpha silhouette. */
+.icon-mask {
+  display: inline-block;
+  background-color: var(--color-text);
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+  mask-position: center;
+  -webkit-mask-size: contain;
+  mask-size: contain;
+}
+
 .site-logo-icon {
   width: 3rem;
   height: 3rem;
-  filter: brightness(0) invert(1);
-}
-
-:root[data-theme="light"] .site-logo-icon {
-  filter: brightness(0);
+  -webkit-mask-image: url(../assets/images/logo.svg);
+  mask-image: url(../assets/images/logo.svg);
 }
 
 .nav-toggle {
@@ -256,14 +268,9 @@ h3 { font-size: 1.15rem; }
   width: 1.1rem;
   height: 1.1rem;
 }
+/* mask-image itself is set inline per-instance (see header.ejs/footer.ejs),
+   since each contact link uses a different icon file */
 
-/* the source SVGs are solid black; invert them in dark mode so they stay
-   visible against the dark surface behind them */
-:root[data-theme="dark"] .contact-icon {
-  filter: invert(1);
-}
-
-/* Mobile nav: full-screen panel that slides in from the right */
 @media (max-width: 640px) {
   .nav-toggle {
     display: inline-flex;
@@ -405,11 +412,10 @@ main {
 }
 
 .udemy-icon {
-  filter: brightness(0) invert(1);
-}
-
-:root[data-theme="light"] .udemy-icon {
-  filter: brightness(0);
+  width: 10rem;
+  aspect-ratio: 1000 / 375.9;
+  -webkit-mask-image: url(../assets/images/udemy.svg);
+  mask-image: url(../assets/images/udemy.svg);
 }
 
 /* ---------- Resume (About page) ---------- */
@@ -432,7 +438,7 @@ main {
   width: 160px;
   height: 160px;
   object-fit: cover;
-  border : 2px solid #006FFF;
+  border : 3px solid #006FFF;
   border-radius: 50%;
   box-shadow: 0 0 8px 5px #006eff4f ;
 }
@@ -585,13 +591,31 @@ main {
 
 .post-list-item h2 {
   font-size: 1.2rem;
+  margin-bottom: 8px;
+}
+
+.calendar-icon {
+  background-color: var(--color-text-muted);
+  width: 1rem;
+  height: 1rem;
+  -webkit-mask-image: url(../assets/images/calendar.svg);
+  mask-image: url(../assets/images/calendar.svg);
+}
+
+.date-icon {
+  display: flex;
+  align-items: center;
+  gap: 0.2rem;
 }
 
 .post-date {
-  display: block;
   margin-top: 0.25rem;
   color: var(--color-text-muted);
   font-size: 0.9rem;
+}
+
+.date-icon .post-date {
+  margin-top: 0;
 }
 
 .post-list-item p {
@@ -612,11 +636,6 @@ main {
 
 .post h1 {
   margin-bottom: 0.25rem;
-}
-
-.post .post-date {
-  margin-top: 0;
-  margin-bottom: 1.5rem;
 }
 
 .post p {
