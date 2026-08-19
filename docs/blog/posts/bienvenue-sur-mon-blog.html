@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bienvenue sur mon blog — Robin Villier</title>
+  <meta name="description" content="A quick note on what this blog is for and what to expect here.">
+  <link rel="icon" type="image/svg+xml" href="../../assets/images/logo.svg">
+  <script>
+  (function () {
+    // Must match THEME_KEY in js/theme.js. Runs blocking, before first
+    // paint, so the page never flashes the wrong theme while js/theme.js
+    // (loaded with `defer`) is still waiting to run.
+    var theme = localStorage.getItem("site-theme");
+    if (theme !== "light" && theme !== "dark") {
+      theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+    }
+    document.documentElement.setAttribute("data-theme", theme);
+  })();
+</script>
+
+  <link rel="stylesheet" href="../../css/style.css">
+</head>
+<body>
+  <header class="site-header">
+  <div class="container">
+    <a class="site-logo" href="../../index.html">
+      <span class="icon-mask site-logo-icon" aria-hidden="true"></span>
+      Robin Villier
+    </a>
+
+    <button class="nav-toggle" aria-expanded="false" aria-controls="site-nav" aria-label="Toggle menu">☰</button>
+
+    <nav class="site-nav" id="site-nav">
+      <ul class="nav-links">
+        
+      <li><a href="../../index.html">Home</a></li>
+        
+      <li><a href="../../blog/index.html">Blog</a></li>
+        
+      <li><a href="../../about.html">About</a></li>
+        
+      </ul>
+      <ul class="contact-links">
+        
+        <li>
+          <a class="contact-icon-link" href="mailto:rvillier99@gmail.com" aria-label="Email">
+            <span class="icon-mask contact-icon" aria-hidden="true" style="mask-image: url('../../assets/images/email.svg'); -webkit-mask-image: url('../../assets/images/email.svg');"></span>
+          </a>
+        </li>
+        
+        <li>
+          <a class="contact-icon-link" href="https://www.linkedin.com/in/robin-villier/" aria-label="LinkedIn" target="_blank" rel="noopener">
+            <span class="icon-mask contact-icon" aria-hidden="true" style="mask-image: url('../../assets/images/linkedin.svg'); -webkit-mask-image: url('../../assets/images/linkedin.svg');"></span>
+          </a>
+        </li>
+        
+        <li>
+          <a class="contact-icon-link" href="https://github.com/RobinVillier" aria-label="GitHub" target="_blank" rel="noopener">
+            <span class="icon-mask contact-icon" aria-hidden="true" style="mask-image: url('../../assets/images/github.svg'); -webkit-mask-image: url('../../assets/images/github.svg');"></span>
+          </a>
+        </li>
+        
+      </ul>
+      <button class="theme-toggle" aria-label="Toggle theme">
+        <img class="theme-icon theme-icon-moon" src="../../assets/images/moon.svg" alt="">
+        <img class="theme-icon theme-icon-sun" src="../../assets/images/sun.svg" alt="">
+      </button>
+    </nav>
+  </div>
+</header>
+
+
+  <main>
+    <article class="container post">
+      <a class="back-link" href="../../blog/index.html">← Back to Blog</a>
+      <h1 class="title">Le début d’un nouveau chapitre 📖</h1>
+      <div class="date-icon">
+        <span class="icon-mask calendar-icon" aria-hidden="true"></span>
+        <span class="post-date">
+          10 Août 2026
+        </span>
+      </div>
+      <p class="btm-divider" id="catch-phraese">
+        C’est le départ d’une (quasi) nouvelle aventure. Bienvenue sur mon blog de Support Informatique.
+      </p>
+      <div id="corpus">
+        <p>
+          Voici le premier article publié sur mon site. 
+          <br>
+          Je vais l'utiliser pour documenter mon parcours de reconversion dans le domaine du support informatique : mes notes de troubleshooting, ce que 
+          j'apprends en préparant des certifications, ainsi que des articles sur les problèmes que j'ai résolus et les projets que je réalise.
+        </p>
+        <h3 class="title">Introduction</h3>
+        <p>
+          Voilà maintenant un peu plus de deux semaines que j'ai débuté ma certification 
+          <a href="https://www.coursera.org/professional-certificates/google-it-support?" target="_blank">Google IT Support Professional Certificate</a>
+          sur Coursera.
+          <br>
+          Avant d'aller un peu plus en profondeur sur ce sujet, je voulais parler un peu de mon parcours jusque-là, et des choix qui me poussent 
+          à choisir ce domaine 👨‍🔧
+        </p>
+        <h3 class="title">L'Animation 3D 🧊</h3>
+        <p>
+          Depuis que je connais le monde de l'informatique, un milieu m'a tout de suite attiré quand j'étais ado : l'animation 3D. J'ai rapidement été fasciné 
+          par les quelques animations Minecraft que je voyais passer sur YouTube, et je voulais faire pareil. Alors j'ai commencé à apprendre par mes propres 
+          moyens, en commençant sur Blender au collège et au lycée, puis sur des logiciels standards de l'animation 3D, comme Autodesk Maya, en intégrant une 
+          école post-bac.
+          <br>
+          <br>
+          Je choisis de me spécialiser dans le rig. Une spécialité plus technique qu'artistique, qui pousse constamment à troubleshooter les rigs pour trouver 
+          des solutions aux différents problèmes techniques que je rencontre. Pendant ces études, je comprends assez vite et je me tourne rapidement vers mes 
+          camarades pour leur proposer mon aide, jusqu'à proposer des cours du soir, ou sur les après-midi de vide que nous avions parfois.
+          <br>
+          <br>
+          Cela me permet de faire un super parallèle avec <strong>l'IT</strong>. J'ai toujours aimé régler les problèmes des gens, sans forcément attendre qu'ils 
+          viennent me le demander, que ce soit pour du hardware ou pour des questions techniques sur les logiciels d'animation. Sans tout savoir, j'ai toujours aimé la 
+          résolution de problèmes : en trouver la cause, trouver une solution, tout en automatisant ce qui mérite de l'être. J'ai, par ailleurs, énormément appris 
+          en réglant les problèmes des autres.
+          <br>
+          <br>
+          Avant même que mes études ne se terminent, le rig me pousse à apprendre à coder avec <strong>Python</strong> afin d'automatiser toutes les tâches possibles. Alors, 
+          comme à mon habitude, je fouille internet pour apprendre par mes propres moyens, et je tombe sur la magnifique formation Python de Thibault Houdon. 
+          J'utilise ensuite le code pour bien d'autres aspects que ma spécialisation dans le monde de l'animation 3D, mais aussi pour étendre mes connaissances 
+          avec le web dev, par exemple.
+          <br>
+          <br>
+          Quelques mois avant la fin de mes études, je trouve du travail à distance dans ma spécialisation, le rig, pour un Américain qui lance son entreprise, 
+          <a href="https://blackswaneffect.com/" target="_blank">Black Swan Effect. </a>
+          Après plus de trois ans, le milieu de l'animation s'essouffle, et il devient quasiment impossible de trouver du travail si on n'a 
+          pas les bonnes connaissances ou quinze ans d'expérience. Alors je trouve quelques missions par ci par là, mais rien de bien conséquent, de quoi tenir 
+          de 2 semaines à 1 mois de temps en temps.
+          <br>
+          <br>
+          Après mûres réflexions, je réalise que ce que j'aime au-delà de tout dans l'animation, c'est le développement.
+        </p>
+        <h3 class="title">L'IT 💻</h3>
+        <p>
+          Ce qui nous ramène au support informatique. 
+          <br>
+          J'en parlerai plus en détail dans un futur post sur le changement de batterie d'un PC portable, mais bien avant l'animation et le code, le hardware avait 
+          déjà une place énorme dans ma vie. Du montage à la personnalisation de mes ordinateurs, en passant par l'installation et la configuration d'OS, j'ai toujours 
+          tout fait moi-même. Je n'ai jamais arrêté de regarder les vidéos de
+          <a href="https://www.youtube.com/@LinusTechTips" target="_blank">LinusTechTips</a>, de 
+          <a href="https://www.youtube.com/@ThioJoe" target="_blank">ThioJoe</a> (et 
+          <a href="https://www.youtube.com/@ThioJoeTech" target="_blank">ThioJoeTech</a>), ou encore de 
+          <a href="https://www.youtube.com/@Bitwit" target="_blank">Bitwit</a> et bien d'autres, toujours à vouloir connaître les dernières technos du moment, 
+          les façons de faire de chacun, etc.
+          <br>
+          Finalement, le choix est super logique pour moi. J'en ai aussi beaucoup parlé autour de moi, et cela a du sens pour mes proches également.
+          <br>
+          <br>
+          Alors je décide de me documenter pour savoir par où commencer, ainsi que pour trouver la meilleure route à prendre en fonction des compétences que j'ai 
+          déjà acquises. Très vite, je tombe sur le 
+          <a href="https://www.coursera.org/professional-certificates/google-it-support?" target="_blank">Google IT Support Professional Certificate</a>, 
+          et je n'en lis que du bien, alors je le mets de côté et je poursuis mes recherches. J'entends parler de mille et une certifications, certaines générales, 
+          d'autres plus spécialisées, comme dans la cybersécurité, ou plus axées network, mais toujours, celle de Google est conseillée comme un socle hyper important pour
+          la suite.
+          <br>
+          <br>
+          La formation se divise en 6 chapitres, portant tous sur des sujets différents de l'IT. Le networking notamment, avec toutes les notions de TCP/IP, jusqu'au 
+          VPN, en passant par le DNS, le DHCP, les adresses IP et tout le reste, comprenant même quelques passages sur l'histoire de l'ordinateur et d'internet. 
+          Alors je prends des notes (beaucoup de notes) sur Notion : j'en ai environ 30 portant sur les cours eux-mêmes, et une dizaine consacrées à l'organisation, 
+          aux idées et au personnel (toujours autour de l'IT). Je les relis le soir, j'intègre les notions tant que c'est encore chaud, et je me documente en dehors 
+          des cours, à base de posts Reddit et de vidéos YouTube, sur tous les sujets que je viens de rencontrer, afin d'améliorer mes notes et mes compétences.
+          <br>
+          <br>
+          Cela fait un peu plus de deux semaines, au moment où j'écris ces lignes, que j'ai commencé la formation. J'en suis à 2 chapitres de bouclés sur 6. J'ai 
+          pour objectif de la finir courant septembre, en commençant à postuler fin août début septembre pour tenter de trouver un premier poste en N1, voire N2 si 
+          j'arrive à être suffisamment convaincant.
+          <br>
+          <br>
+          Enfin, une fois la formation <strong>Google IT</strong> terminée, je ne compte évidemment pas m'arrêter là. Je me suis constitué une roadmap sur 4 mois pour 
+          l'instant. Je m'intéresse déjà beaucoup à la mise en place d'un homelab, pour expérimenter et mettre en pratique tout ce que j'ai appris, et par la suite, 
+          partir sur d'autres formations et certificats, qui restent encore à définir vu le nombre astronomique de ces derniers.
+          </p>
+        <h3 class="title">Conclusion</h3>
+          <p>
+            Voilà, vous savez tout. C'était un peu long, désolé, merci d'avoir pris le temps de me lire. Vous pouvez me contacter via la section contact juste en 
+            dessous si vous le désirez.
+            <br>
+            PS : il me semble important de préciser que tout ce post a été rédigé de ma main, sans utilisation d'IA.
+          </p>
+      </div>
+      
+      <br>
+<br>
+<div>
+    <p>
+        Mes emails et dms linkedin sont ouverts pour vos retours et suggestions.
+        <br>
+        <br>
+        Happy Support ! 🎉
+        <br>
+        Robin Villier
+    </p>
+</div>
+
+    </article>
+  </main>
+
+  <div class="contacts">
+  <h2>Me contacter</h2>
+  <p class="lead">Une question, une opportunité ? N'hésitez pas à me contacter directement.</p>
+  <ul class="contact-links">
+    
+    <li>
+      <a class="contact-icon-link" href="mailto:rvillier99@gmail.com" aria-label="Email">
+        <span class="icon-mask contact-icon" aria-hidden="true" style="mask-image: url('../../assets/images/email.svg'); -webkit-mask-image: url('../../assets/images/email.svg');"></span>
+      </a>
+    </li>
+    
+    <li>
+      <a class="contact-icon-link" href="https://www.linkedin.com/in/robin-villier/" aria-label="LinkedIn" target="_blank" rel="noopener">
+        <span class="icon-mask contact-icon" aria-hidden="true" style="mask-image: url('../../assets/images/linkedin.svg'); -webkit-mask-image: url('../../assets/images/linkedin.svg');"></span>
+      </a>
+    </li>
+    
+    <li>
+      <a class="contact-icon-link" href="https://github.com/RobinVillier" aria-label="GitHub" target="_blank" rel="noopener">
+        <span class="icon-mask contact-icon" aria-hidden="true" style="mask-image: url('../../assets/images/github.svg'); -webkit-mask-image: url('../../assets/images/github.svg');"></span>
+      </a>
+    </li>
+    
+  </ul>
+</div>
+
+  <footer class="site-footer">
+  <div class="container">
+    <p>&copy; 2026 Robin Villier</p>
+    <p class="inner-text">Made with HTML, JavaScript, CSS and EJS. And love ❤️ </p>
+    <ul class="contact-links">
+      
+      <li>
+        <a class="contact-icon-link" href="mailto:rvillier99@gmail.com" aria-label="Email">
+          <span class="icon-mask contact-icon" aria-hidden="true" style="mask-image: url('../../assets/images/email.svg'); -webkit-mask-image: url('../../assets/images/email.svg');"></span>
+        </a>
+      </li>
+      
+      <li>
+        <a class="contact-icon-link" href="https://www.linkedin.com/in/robin-villier/" aria-label="LinkedIn" target="_blank" rel="noopener">
+          <span class="icon-mask contact-icon" aria-hidden="true" style="mask-image: url('../../assets/images/linkedin.svg'); -webkit-mask-image: url('../../assets/images/linkedin.svg');"></span>
+        </a>
+      </li>
+      
+      <li>
+        <a class="contact-icon-link" href="https://github.com/RobinVillier" aria-label="GitHub" target="_blank" rel="noopener">
+          <span class="icon-mask contact-icon" aria-hidden="true" style="mask-image: url('../../assets/images/github.svg'); -webkit-mask-image: url('../../assets/images/github.svg');"></span>
+        </a>
+      </li>
+      
+    </ul>
+  </div>
+</footer>
+
+
+  <script src="../../js/theme.js" defer></script>
+  <script src="../../js/nav.js" defer></script>
+  <script src="../../js/contact.js" defer></script>
+</body>
+</html>

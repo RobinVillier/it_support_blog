@@ -19,21 +19,25 @@
 
       <ul class="post-list">
         <li class="post-list-item">
-          <a href="<%= base %>blog/posts/welcome-to-my-blog.html">
-            <h2>Bienvenue sur mon blog</h2>
-            <div class="date-icon">
-              <span class="icon-mask calendar-icon" aria-hidden="true"></span>
-              <span class="post-date">
-                10 Août 2026
-              </span>
+          <a href="<%= base %>blog/posts/bienvenue-sur-mon-blog.html">
+            <div class="post-title">
+              <h2>Le début d’un nouveau chapitre 📖</h2>
+              <div class="date-icon">
+                <span class="icon-mask calendar-icon" aria-hidden="true"></span>
+                <span class="post-date">
+                  10 Août 2026
+                </span>
+              </div>
+              <p>C’est le départ d’une (quasi) nouvelle aventure. Bienvenue sur mon blog de support informatique.</p>
             </div>
-            <p>Bienvenue sur mon blog, ayant pour but de documenter ma reconversion dans le monde de l'IT</p>
+            <img src="<%= base %>assets/images/blogs/welcome-to-my-blog/thumbnail.png" alt="logo as thumbnail for this blog post.">
           </a>
         </li>
       </ul>
     </section>
   </main>
 
+  <%- include('../../partials/contacts') %>
   <%- include('../../partials/footer') %>
 
   <script src="<%= base %>js/theme.js" defer></script>
