@@ -564,6 +564,10 @@ main {
   margin-top: 0.3rem;
 }
 
+.main-formation {
+  color: var(--color-accent);
+}
+
 /* ---------- Blog listing ---------- */
 .greetings {
   margin: 0;
