@@ -664,6 +664,12 @@ main {
   text-align: justify;
 }
 
+@media (max-width: 641px) {
+  .post p {
+    text-align: left;
+  }
+}
+
 #corpus {
   padding-top: 1rem;
 }
