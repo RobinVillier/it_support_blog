@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nouvelle batterie d’une JBL Xtreme 🔊 — Robin Villier</title>
+  <meta name="description" content="Aujourd’hui c’est changement de batterie de la JBL Xtreme de ma mère.">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+  <link rel="icon" type="image/svg+xml" href="<%= base %>assets/images/logo.svg">
+  <%- include('../../../partials/theme-init') %>
+  <link rel="stylesheet" href="<%= base %>css/style.css">
+</head>
+<body>
+  <%- include('../../../partials/header') %>
+
+  <main>
+    <article class="container post">
+      <a class="back-link" href="<%= base %>blog/index.html">← Back to Blog</a>
+      <h1 class="title">Nouvelle batterie d’une JBL Xtreme 🔊</h1>
+      <div class="date-icon">
+        <span class="icon-mask calendar-icon" aria-hidden="true"></span>
+        <span class="post-date">
+          3 Septembre 2026
+        </span>
+      </div>
+      <p class="btm-divider" id="catch-phraese">Aujourd’hui c’est changement de batterie de la JBL Xtreme de ma mère.</p>
+      <div id="corpus">
+        <p>Ça doit faire 10 ans que la JBL est chez elle, mais peut être 5 à ne pas bouger de l’étagère où elle a été fixée, par manque d’autonomie. 
+          C’est à dire que 5 secondes après débranchement en utilisation, elle s’éteint.</p>
+        <p>Alors j’ai décidé de la changer, c’est en réalité assez simple, suffit d’un tuto youtube, de trouver la bonne référence pas trop chère 
+          sur amazon, et on est bon</p>
+        <h3 class="title">La recherche</h3>
+        <p>Une idée en tête, changer la batterie de la JBL Xtreme 1ère génération. Pas grand chose de disponible sur le site de 
+          <strong><a href="https://fr.jbl.com/spare-parts/" target="_blank">JBL</a></strong> alors on s’équipe ailleurs sur internet.
+        <br>
+        J’ai choisi <strong><a href="https://www.amazon.fr/dp/B0CLVJBLJJ?ref=ppx_yo2ov_dt_b_fed_asin_title" target="_blank">cette batterie</a></strong>, 
+        compatible avec de très bonne reviews, même recommandée sur certains forum, avec les mêmes spécifications que la batterie d’origine, à 
+        savoir 7.4V et 5000mAh.
+        <br>
+        Pour ce qui est du tuto, vous trouverez ça très facilement sur youtube, mais voici quand même celui que j’ai trouvé.
+        <br>
+        <strong><a href="https://www.youtube.com/watch?v=lKir6sqVpx4" target="_blank">Comment remplacer la batterie du JBL Xtreme | cellonic (guide réparation)</a>. 
+          Youtube.</strong></p>
+        <h3 class="title">Le remplacement</h3>
+        <p>Après reception de la batterie, me voici donc prêt pour cette petite réparation.</p>
+        <p>Donc bon à part faire sauter les covers qui peuvent être un peu dur à cause des pates en plastique qui les retiennent, rien de compliquer, 
+          une dizaines de vis à dévisser pas grand chose de compliqué. Le seul détail, c’est détacher le bon cable et réussir à le débrancher puis 
+          rebrancher, vu le petit espèce il vaut mieux avoir les doigts fins.</p>
+        <div class="carousel-container">
+          <div id="carouselExampleIndicators" class="carousel slide">
+            <div class="carousel-indicators">
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="<%= base %>assets/images/blogs/nouvelle-batterie-dune-jbl-xtreme/image_1.jpg" class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item">
+                <img src="<%= base %>assets/images/blogs/nouvelle-batterie-dune-jbl-xtreme/image_5.jpg" class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item">
+                <img src="<%= base %>assets/images/blogs/nouvelle-batterie-dune-jbl-xtreme/image_14.jpg" class="d-block w-100" alt="Cat Image">
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+        </div>
+        
+        <h3 class="title">Conclusion</h3>
+        <p>C’était un cours post, mais bien sympa à réaliser, qui à fait au moins une heureuse (ma mère, c'est pas rien 😄).</p>
+        <p>On redonne un petit bout de vie et d'utilité à cette enceinte, et c’est repartie pour quelques années.</p>
+      </div>
+      
+      <%- include('../partials/greetings') %>
+    </article>
+  </main>
+
+  <%- include('../../../partials/contacts') %>
+  <%- include('../../../partials/footer') %>
+
+  <script src="<%= base %>js/theme.js" defer></script>
+  <script src="<%= base %>js/nav.js" defer></script>
+  <script src="<%= base %>js/contact.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+</body>
+</html>

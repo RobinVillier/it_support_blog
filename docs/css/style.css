@@ -688,6 +688,22 @@ main {
   color: var(--color-accent-hover);
 }
 
+.carousel-container {
+  max-width: 20rem;
+  justify-self: center;
+}
+
+.carousel-item {
+  height: 400px;
+}
+
+.carousel-item img {
+  border-radius: var(--radius);
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
 /* ---------- Contacts ---------- */
 .contacts {
   flex: 1;
