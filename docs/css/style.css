@@ -718,7 +718,6 @@ main {
 
 .carousel-btn {
   position: absolute;
-  z-index: 99;
   top: 50%;
   transform: translateY(-50%);
   display: flex;
